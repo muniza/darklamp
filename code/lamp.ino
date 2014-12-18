@@ -37,10 +37,14 @@ void loop() {
     scale = 0;
   }
   
-  //activate rainbow when scale is high
+  //activate rainbow when scale is high for 5000 consecutive counts
   if (scale > 120) {
     time++;
   }
+  else {
+    time = 0;
+  }
+  
   if (time == 5000) {
     state = 1;
   }
